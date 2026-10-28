@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>MyMedFriend</title>
+  <defs><clipPath id="c"><rect x="6" y="22" width="52" height="22" rx="11"/></clipPath></defs>
+  <rect width="64" height="64" rx="6" fill="#0f5c5c"/>
+  <g transform="rotate(-40 32 32)">
+    <rect x="6" y="22" width="52" height="22" rx="11" fill="#f4efe4"/>
+    <rect x="32" y="22" width="26" height="22" fill="#c9d6d2" clip-path="url(#c)"/>
+    <path d="M32 22 V44" stroke="#0f5c5c" stroke-width="2"/>
+    <path d="M15 33 L20 38 L27 28" fill="none" stroke="#0f5c5c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="rotate(40 21 33)"/>
+  </g>
+</svg>

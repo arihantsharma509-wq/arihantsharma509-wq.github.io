@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyMedFriend | Offline medication tracker, no account</title>
+<meta name="description" content="MyMedFriend is a student-built medication tracker that works with no signal and no account. Records stay on your phone unless you export them.">
+<link rel="canonical" href="https://arihantsharma509-wq.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f4efe4">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MyMedFriend">
+<meta property="og:title" content="MyMedFriend: a medication tracker for places with no signal">
+<meta property="og:description" content="No account and no internet needed. Records stay on your phone unless you export them. A student project.">
+<meta property="og:url" content="https://arihantsharma509-wq.github.io/">
+<meta property="og:image" content="https://arihantsharma509-wq.github.io/og-image.png">
+<meta property="og:image:alt" content="MyMedFriend logo with the text: A medication tracker for places with no signal.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MyMedFriend",
+  "applicationCategory": "HealthApplication",
+  "description": "A student-built offline medication tracker with no account. Not a medical device and not medical advice.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="page bar">
+    <a class="mark" href="index.html">MyMedFriend</a>
+    <nav aria-label="Main">
+      <a href="#story">Story</a>
+      <a href="#features">Features</a>
+      <a href="#demo">Demo</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page">
+    <section class="hero" aria-labelledby="top-title">
+      <h1 id="top-title">A medication tracker for places with no signal.</h1>
+      <p class="lead">No account and no internet needed. Your records stay on your phone unless you choose to share them.</p>
+      <ul class="facts" aria-label="Key facts">
+        <li>Works offline</li>
+        <li>No sign-up</li>
+        <li>Free</li>
+        <li>Delete everything in one step</li>
+      </ul>
+    </section>
+
+    <section class="row" id="story" aria-labelledby="story-h">
+      <h2 id="story-h">Story</h2>
+      <div class="col story">
+        <p>MyMedFriend started in my sophomore year as a SkillsUSA Health Science project: a wireframe for a simple medication reminder app, built around the sign-up flow most apps use by default (email, password, basic account details). It was a good first step. It rested on my assumptions, and I had not yet watched anyone use it.</p>
+        <p>Those assumptions broke while I was volunteering at a local food pantry. An older resident pulled out a bag of medication bottles and a handwritten schedule, then opened a popular reminder app on his phone. It never got past the loading screen. The building's thick brick walls blocked his cell signal, and the app needed a cloud connection just to show him a list of pills he was already holding.</p>
+        <p>Around the same time, I talked with two nurses I know, a registered nurse and a licensed vocational nurse. They told me that sign-ups, forgotten passwords, and needing a connection make apps harder for patients, especially older adults and people with poor reception. They also pointed out that a plain "taken or missed" checkbox tells a doctor nothing about why a dose was skipped.</p>
+        <p>I stopped trying to patch my wireframe. When I moved from design to code, I dropped the account-based model and built the app in React Native with local storage, so everything works with no signal, no account, and no data leaving the phone unless you choose to export it. I added a prompt that records why a dose was missed or skipped, plus custom tags to organize medications.</p>
+        <p>An early version of the app also included a percentage chart, an idea I developed with an imaging supervisor I know. A licensed vocational nurse who reviewed the app helped me see the problem: a calculated number can create false confidence instead of helping someone manage their routine. I removed it.</p>
+        <p>As the app grew, five more healthcare workers gave informal feedback at different stages, including a physician assistant, a doctor of physical therapy, and nurses. Their input shaped the printable summary, symptom notes, tags, and reminders. None of them has clinically validated or endorsed MyMedFriend.</p>
+        <p class="close">The biggest lesson was subtraction. Accounts, cloud dependence, and charts were not helping anyone. MyMedFriend now does a few things and tries to do them reliably, anywhere.</p>
+      </div>
+    </section>
+
+    <section class="row" id="features" aria-labelledby="features-h">
+      <h2 id="features-h">What it does</h2>
+      <div class="col wide">
+        <p class="col">Built to keep working where other apps stop: clinics and community buildings with weak or no signal.</p>
+        <ol class="features">
+          <li>
+            <div>
+              <h3>Works without internet</h3>
+              <ul>
+                <li>Everything is stored on your phone.</li>
+                <li>No email, password, or sign-up.</li>
+                <li>Your schedules, dose history, and notes stay on your device unless you choose to export them.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Record why a dose was missed</h3>
+              <ul>
+                <li>When you miss or skip a dose, add a note or pick a tag such as Travel, Work Shift, or Out of Routine.</li>
+                <li>You get a record of what happened, with a reason attached to each missed dose, to share with your doctor if you choose.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Symptom notes</h3>
+              <ul>
+                <li>Write down how you feel next to your dose history.</li>
+                <li>Look back over time, and bring it to appointments if you want to.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Pill counts and refill reminders</h3>
+              <ul>
+                <li>Your pill count goes down each time you log a dose.</li>
+                <li>Low stock is highlighted when you have fewer than 5 pills, and you get a notification at 3 or fewer, so you notice when it is time to refill.</li>
+                <li>This only works if you log your doses.</li>
+              </ul>
+              <div class="notice"><p><strong>Daily reminders.</strong> Reminders are scheduled on your phone and work without internet. They can be delayed or missed depending on your phone's settings, such as battery saver. Do not rely on them as your only reminder.</p></div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Printable summary</h3>
+              <ul>
+                <li>Create a PDF with your current medications, pill counts, and dose history to bring to appointments.</li>
+                <li>Every PDF includes a note that it contains self-reported records from a personal tracking tool.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Export and backup</h3>
+              <ul>
+                <li>Export your log as a spreadsheet file (CSV) to save or keep as a backup.</li>
+                <li>Spreadsheet exports do not include the disclaimer note.</li>
+              </ul>
+              <div class="notice"><p><strong>No cloud backup.</strong> If you lose your phone, your data is gone unless you have exported it. Exporting regularly is the only way to protect your records.</p></div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Your own tags</h3>
+              <ul>
+                <li>Create tags to organize your medications by time of day, type, or household routine.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Delete everything</h3>
+              <ul>
+                <li>One action erases all your data from the app and cancels your scheduled reminders.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="row" id="demo" aria-labelledby="demo-h">
+      <h2 id="demo-h">Try the missed-dose prompt</h2>
+      <div class="col wide">
+        <p class="col">This is a small working demo of one part of the app. Mark a dose as taken, missed, or skipped. For a missed or skipped dose you can add a reason and a note.</p>
+        <div class="demo" id="demo-app">
+          <p class="label">Demo with sample data. Nothing you type is saved or sent anywhere. This is not the real app.</p>
+          <ul id="demo-meds" aria-label="Sample doses"></ul>
+          <form class="noteform" id="demo-form" hidden>
+            <p id="demo-form-title" style="margin:0 0 10px;font-weight:700;"></p>
+            <fieldset>
+              <legend>Reason (optional)</legend>
+              <div id="demo-chips"></div>
+            </fieldset>
+            <label for="demo-note">Notes, such as symptoms (optional)</label>
+            <textarea id="demo-note" rows="3"></textarea>
+            <p style="margin-top:12px;">
+              <button type="submit" class="btn primary">Save to log</button>
+              <button type="button" class="btn" id="demo-cancel">Cancel</button>
+            </p>
+          </form>
+          <div class="logbox">
+            <h3>Log</h3>
+            <ul id="demo-log" aria-live="polite"><li class="empty">Nothing logged yet.</li></ul>
+            <p style="margin:12px 0 0;"><button type="button" class="btn" id="demo-reset">Reset demo</button></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row" id="privacy" aria-labelledby="privacy-h">
+      <h2 id="privacy-h">Privacy in short</h2>
+      <div class="col">
+        <dl>
+          <dt>What is stored</dt>
+          <dd>Your medications, schedules, pill counts, dose history, tags, and any notes you write.</dd>
+          <dt>Where it is stored</dt>
+          <dd>Only on your phone. The app has no accounts and no servers of its own, and it sends your information nowhere.</dd>
+          <dt>When it leaves your phone</dt>
+          <dd>When you export a PDF or spreadsheet and share it yourself. After that, the file is yours to protect.</dd>
+          <dt>Phone backups</dt>
+          <dd>Your phone's own backup service, such as iCloud or Google backup, may copy app data depending on your settings. Your phone controls that, and MyMedFriend has no say in it. The app does not encrypt its data, so use your phone's screen lock.</dd>
+          <dt>Tracking</dt>
+          <dd>None. No analytics, no ads, no accounts.</dd>
+        </dl>
+        <p style="margin-top:1.2em;">Read the full <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
+      </div>
+    </section>
+
+    <section class="row" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Feedback</h2>
+      <div class="col">
+        <p>MyMedFriend is a student project and it keeps changing. Every real improvement so far came from someone telling me what was not working, so I want to hear from you.</p>
+        <p>Email: <a href="mailto:arihant.sharma509@gmail.com">arihant.sharma509@gmail.com</a></p>
+        <p class="small">Please do not send personal medical information. I cannot give medical advice.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="page">
+    <p class="disclaimer">MyMedFriend is a student project. It is not a medical device and does not provide medical advice. Follow the instructions from your doctor, pharmacist, or care team.</p>
+    <p class="foot-links"><a href="privacy.html">Privacy Policy</a> <a href="terms.html">Terms of Use</a> <a href="llms.txt">llms.txt</a></p>
+    <p class="small">&copy; <span id="yr">2026</span> MyMedFriend. Made in Wylie, Texas.</p>
+  </div>
+</footer>
+<script src="demo.js" defer></script>
+</body>
+</html>

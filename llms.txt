@@ -1,0 +1,15 @@
+# MyMedFriend
+
+> MyMedFriend is a student-built medication tracker made in Wylie, Texas. It works with no internet and no account. Records stay on the user's phone unless the user exports them. It is not a medical device and does not give medical advice.
+
+## Pages
+
+- [Home](https://arihantsharma509-wq.github.io/): the story behind the app, the feature list, and a small demo of the missed-dose prompt.
+- [Privacy Policy](https://arihantsharma509-wq.github.io/privacy.html): what the app and the website store and how to delete it.
+- [Terms of Use](https://arihantsharma509-wq.github.io/terms.html): terms for using the app and site.
+
+## Facts worth knowing
+
+- No cloud backup. Records exist only on the phone unless exported as PDF or CSV.
+- Reminders depend on phone settings and can be delayed or missed.
+- Informal feedback came from healthcare workers. None of them has clinically validated or endorsed the app.
